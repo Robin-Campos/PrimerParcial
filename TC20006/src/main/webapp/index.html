@@ -1,10 +1,28 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Start Page</title>
+        <title>TC20006</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>
+            Hola
+        </h1>
+
+        <form action="MiServlet_URL" method="post">
+
+            <fieldset>
+                <legend>Ingresa tu usuario</legend>
+                <input type="text" name="user" placeholder="Usuario" required id="text"><br>
+                <br>
+            </fieldset>
+
+            <fieldset>
+                <input type="submit" value="Enviar" id="enviar"><br>
+            </fieldset>
+        </form>
     </body>
 </html>

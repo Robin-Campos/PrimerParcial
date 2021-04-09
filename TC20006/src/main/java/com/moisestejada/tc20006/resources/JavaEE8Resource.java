@@ -1,4 +1,4 @@
-package com.progrados.tc20006.resources;
+package com.moisestejada.tc20006.resources;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

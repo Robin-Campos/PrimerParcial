@@ -1,4 +1,4 @@
-package com.progrados.tc20006;
+package com.moisestejada.tc20006;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
