@@ -1,0 +1,55 @@
+body{
+	box-sizing: border-box;
+	font-family: monospace;
+	font-weight: bold;
+	background-color: #127668;
+	align-items: center;
+}
+form{
+	margin-top: 50px;
+	text-align: center;
+	background-color: white;
+	border-radius: 3px;
+	color: black;
+	width: 300px
+}
+input, textarea{
+	border: 0;
+	outline: none;
+	font-size: 16px;
+	margin-bottom: 5px;
+
+}
+label{
+	color: black;
+	font-size: 15px;
+	margin-bottom: 30px;
+}
+.Escribir{
+	border: solid 1px #999;
+	padding: 5px;
+	width: 280px;
+}
+.Escribir:focus{
+	border-color: #127668;
+}
+.boton:hover{
+	background-color: green;
+}
+.boton{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-bottom: 10px;
+	background-color: #67FF60;
+}
+div{
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+legend{
+	font-size: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}

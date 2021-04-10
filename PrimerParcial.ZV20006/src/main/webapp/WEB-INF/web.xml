@@ -4,9 +4,25 @@
         <servlet-name>Servlet</servlet-name>
         <servlet-class>czepeda.servlets.Servlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Datos</servlet-name>
+        <servlet-class>czepeda.servlets.Datos</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Resultados</servlet-name>
+        <servlet-class>czepeda.servlets.Resultados</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Servlet</servlet-name>
         <url-pattern>/Servlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Datos</servlet-name>
+        <url-pattern>/Datos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Resultados</servlet-name>
+        <url-pattern>/Resultados</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

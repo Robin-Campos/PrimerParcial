@@ -3,21 +3,31 @@
     <head>
         <title>Start Page</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/estilos.css">
     </head>
-    <body>
-        <form action="Servlet" name="Formulario" method="Post">
-            <div class="texto">
-                <label>Nombre:</label><br>
-                <input type="text" name="name" id="name" placeholder="Ingrese su nombre">
-            </div>
+    <body><center>
+        <form action="Resultados" name="Formulario" method="Post">
+            
             <div>
+            <label>Nombre:</label><br>
+            <input type="text" name="name" id="name" placeholder="Ingrese su nombre" class="Escribir" required><br>
+        </div>
+        <div>
             <label>Números:</label><br>
-            <input type="number" name="numero1" id="numero1" placeholder="Ingrese un número">
-            <input type="number" name="numero2" id="numero2" placeholder="Ingrese un número">
-            </div>
+            <input type="number" name="numero1" id="numero1" placeholder="Ingrese un número" class="Escribir" required>
+            <input type="number" name="numero2" id="numero2" placeholder="Ingrese un número" class="Escribir" required><br>
+        </div>
             <div>
-                <input type="submit" value="Enviar">
-            </div>
+            <p>Elige una operación aritmética:</p>
+            <label><input type="radio" name="operaciones" value="suma">Suma</label><br>
+            <label><input type="radio" name="operaciones" value="resta">Resta</label><br>
+            <label><input type="radio" name="operaciones" value="multiplicacion">Multiplicación</label><br>
+            <label><input type="radio" name="operaciones" value="division">División</label><br>
+        </div>
+            <div>
+            <input type="submit" value="Enviar" class="boton">
+        </div>
+    </center>
         </form>
     </body>
 </html>
