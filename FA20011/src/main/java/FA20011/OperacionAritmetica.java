@@ -7,6 +7,7 @@ package FA20011;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Scanner;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -23,17 +24,113 @@ public class OperacionAritmetica extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
+            Primos numeroPrimo = new Primos();
+            int contador = 0, numero = 0;
+            Scanner sc = new Scanner(System.in);
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet OperacionAritmetica</title>");            
+            out.println("<title>Operación Aritmética</title>");
+            out.println("<meta charset=\"UTF-8\">");
             out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet OperacionAritmetica at " + request.getContextPath() + "</h1>");
+            out.println("<body style=\"background-color:rgba(14, 13, 13, 0.952);\">");
+            out.println("<h1 style=\"color: red;font-size: 80px;text-align: center;\">");
+            out.println("<marquee behavior=\"alternate\">");
+            String user = request.getParameter("user");
+            out.println("Bienvenido/a " + user);
+            out.println("</marquee>");
+            out.println("</h1>");
+            String numero1 = request.getParameter("numero1");
+            String numero2 = request.getParameter("numero2");
+            out.println("<form name=\"registro\" action=\"ResultadoOperacionAritmetica\" method=\"POST\">");
+            out.println("<fieldset>");
+            out.println("<legend style=\"color:red; font-size: 70px;text-align: center; \">Datos</legend>");
+            out.println("<p style=\"color: white;font-size: 40px;text-align: center;\">");
+            out.println("Los números que ha ingresado son: " + numero1 + " y " + numero2);
+            out.println("</p>");
+            out.println("</fieldset>");
+            out.println("<fieldset>");
+            out.println("<legend style=\"color:red; font-size: 70px;text-align: center; \">Resultado</legend>");
+            out.println("<p style=\"color: white;font-size: 40px;text-align: center;\">");
+            String Suma = request.getParameter("sumar");
+            String Resta = request.getParameter("restar");
+            String Multiplicación = request.getParameter("multiplicar");
+            String División = request.getParameter("dividir");
+            String OperacionAritmetica = "";
+
+            if (Suma != null) {
+                OperacionAritmetica = "suma";
+                out.println("<h1 style=\"color: white; font-size: 40px; text-align: center;\">");
+                out.println("Usuario: " + (user) + " el resultado de la " + (OperacionAritmetica) + " de (" + numero1 + ") y (" + numero2 + ") es: " + ((Integer.parseInt(numero1) + Integer.parseInt(numero2))));
+                out.println("</h1");
+            } else if (Resta != null) {
+                OperacionAritmetica = "resta";
+                out.println("<h1 style=\"color: white; font-size: 40px; text-align: center;\">");
+                out.println("Usuario: " + (user) + " el resultado de la " + (OperacionAritmetica) + " de (" + numero1 + ") y (" + numero2 + ") es: " + ((Integer.parseInt(numero1) - Integer.parseInt(numero2))));
+                out.println("</h1");
+            } else if (Multiplicación != null) {
+                OperacionAritmetica = "multiplicación";
+                out.println("<h1 style=\"color: white; font-size: 40px; text-align: center;\">");
+                out.println("Usuario: " + (user) + " el resultado de la " + (OperacionAritmetica) + " de (" + numero1 + ") y (" + numero2 + ") es: " + ((Integer.parseInt(numero1) * Integer.parseInt(numero2))));
+                out.println("</h1");
+            } else if (División != null) {
+                OperacionAritmetica = "división";
+                out.println("<h1 style=\"color: white; font-size: 40px; text-align: center;\">");
+                out.println("Usuario: " + (user) + " el resultado de la " + (OperacionAritmetica) + " de (" + numero1 + ") y (" + numero2 + ") es: " + ((Integer.parseInt(numero1) / Integer.parseInt(numero2))));
+                out.println("</h1");
+            }
+            out.println("</p>");
+            out.println("</fieldset>");
+            if (Integer.parseInt(numero2) >= Integer.parseInt(numero1)) {
+                out.println("<fieldset>");
+                out.println("<legend style=\"color:red; font-size: 70px;text-align: center; \">Números Primos</legend>");
+                out.println("<p style=\"color: white;font-size: 40px;text-align: center;\">");
+                out.println("Los números primos entre " + numero1 + " y " + numero2 + " son :");
+                out.println("</p>");
+                
+                for (int x = Integer.parseInt(numero2); x >= Integer.parseInt(numero1); x--) {
+                    if (numeroPrimo.esPrimo(x) == true) {
+                        contador++;
+                        out.println("<p style=\"color: white;font-size: 40px;text-align: center;\">");
+                        out.println(String.valueOf(x));
+                        out.println("<br>");
+                    }
+                }
+
+                out.println("<br>");
+
+                out.println("Total de números primos: " + contador);
+                out.println("</p>");
+                sc.close();
+            } else if (Integer.parseInt(numero2) <= Integer.parseInt(numero1)) {
+                out.println("<fieldset>");
+                out.println("<legend style=\"color:red; font-size: 70px;text-align: center; \">Números Primos</legend>");
+                out.println("<p style=\"color: white;font-size: 40px;text-align: center;\">");
+                out.println("Los números primos entre " + numero2 + " y " + numero1 + " son :");
+                out.println("</p>");
+                for (int x = Integer.parseInt(numero1); x >= Integer.parseInt(numero2); x--) {
+                    if (numeroPrimo.esPrimo(x) == true) {
+                        contador++;
+                        out.println("<p style=\"color: white;font-size: 40px;text-align: center;\">");
+                        out.println(String.valueOf(x));
+                        out.println("<br>");
+                    }
+                }
+
+                out.println("<br>");
+
+                out.println("Total de números primos: " + contador);
+                out.println("</p>");
+                sc.close();
+            }
+            out.println("</fieldset>");
             out.println("</body>");
             out.println("</html>");
+
         }
+
     }
+
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
