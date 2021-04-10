@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>PM20072 Programacion 2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            input[type=number]{
+			width: 150px;
+		}
+		input[type=submit]{
+			width: 70px;
+			background: #77dd77;
+			color: white;
+			padding: 5px;
+			font-weight: bold;
+			border: none;
+			
+		}
+		
+		input[type=email], [type=text], [type=number]{
+			background: transparent;
+			border: none;
+			border-bottom: 2px solid black;
+			width: 150px;
+			transition: 1s;
+		}
+		input[type=email]:focus, [type=text]:focus{
+			width: 250px;
+			background: rgb(170, 99, 99, 0.4);
+		}
+		input[type=number]:focus{
+			width: 250px;
+			background: rgb(170, 99, 99, 0.4);} 
+        body{
+	background-color: #C3E3A3;
+	font-family: Arial;
+}
+
+#main-container{
+	margin: 150px auto;
+	width: 300px;
+}
+
+table{
+	background-color: white;
+	text-align: left;
+	border-collapse: collapse;
+	width: 50%;
+}
+
+th, td{
+	padding: 20px;
+}
+
+thead{
+	background-color: #246355;
+	border-bottom: solid 5px #0F362D;
+	color: white;
+}
+
+tr:nth-child(even){
+	background-color: #ddd;
+}
+tr:hover td{
+	background-color: #369681;
+	color: white;
+}
+</style>
+        
+    </head>
+    <body>
+       <form action="Operaciones" method="post">
+           <table border="1px" align="center">
+               <tr><td colspan="2"  align="center"><strong>Ingrese los datos que se le piden a continuación</strong></td></tr>
+               <tr><td>Por favor ingrese su nombre:</td>
+               <td><input type="text" name="nombre" id="nombre" required></td>
+               </tr>
+               <tr><td>Ingrese un numero:</td>
+               <td><input type="number" name="numero1" id="numero1" min="1" pattern="^[0-9]+" required></td>
+               </tr>
+                <tr><td>Ingrese otro numero:</td>
+               <td><input type="number" name="numero2" id="numero2" min="1" pattern="^[0-9]+" required><br></td>
+               </tr>
+               <tr><td colspan="2" align="center"><strong>Operacion a realizar</strong></td></tr>
+               <tr><td>Suma:</td>
+               <td><input type="radio" name="operacion" value="suma" id="suma" checked><br></td>
+               </tr>
+               <tr><td>Resta:</td>
+               <td><input type="radio" name="operacion" value="resta" id="resta"></td>
+               </tr>
+               <tr><td>Multiplicación:</td>
+               <td><input type="radio" name="operacion" value="multiplicacion" id="multiplicacion"></td>
+               </tr>
+               <tr><td>División;</td>
+               <td><input type="radio" name="operacion" value="division" id="division"> </td>
+               </tr>
+               <tr><td colspan="2" align="center"><input type="submit" name="enviar" value="Enviar"></td></tr>
+           </table>
+            
+            
+            
+             
+            
+             
+            
+            
+        </form>
+        <br><br><p align='center'>PM20072 Gerson Alexis Perez Monterroza <br>todos los derechos reservados &#xa9;</p>
+    </body>
+</html>
