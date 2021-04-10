@@ -19,18 +19,18 @@
         <form action="MiServlet_URL" method="post">
 
             <fieldset>
-                <legend>Ingresa tu usuario:</legend>
+                <legend>Ingrese un usuario:</legend>
                 <input type="text" name="user" placeholder="Usuario" required id="text"><br>
             </fieldset>
 
             <fieldset>
-                <legend>Escribir dos numeros:</legend>
+                <legend>Escriba dos números:</legend>
                 <fieldset>
-                    <legend>Numero 1:</legend>
+                    <legend>Número 1:</legend>
                     <input type="number" name="num1" placeholder="Digita un número" value="2" required id="number">
                 </fieldset>
                 <fieldset>
-                    <legend>Numero 2:</legend>
+                    <legend>Número 2:</legend>
                     <input type="number" name="num2" placeholder="Digita un número" value="4" required id="number">
                 </fieldset>
             </fieldset>
@@ -46,6 +46,11 @@
                 <fieldset>
                     <legend>Otro:</legend>
                     <input type="reset" value="Limpiar campos" id="enviar1">
+                    <a href="javascript:history.back()" class="button-button-a" value="Regresar" id="enviar1">Regresar</a>
+                </fieldset>
+                <fieldset>
+                    <legend>Por</legend>
+                    <h3>Moisés Tejada</h3>
                 </fieldset>
             </fieldset>
         </form>
