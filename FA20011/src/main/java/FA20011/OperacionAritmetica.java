@@ -34,6 +34,17 @@ public class OperacionAritmetica extends HttpServlet {
             out.println("<meta charset=\"UTF-8\">");
             out.println("</head>");
             out.println("<body style=\"background-color:rgba(14, 13, 13, 0.952);\">");
+            out.println("<style>\n"
+                    + "        form{\n"
+                    + "            width: 750px;\n"
+                    + "            margin: auto;\n"
+                    + "            background-color:#333333;\n"
+                    + "            padding: 10px 20px;\n"
+                    + "            box-sizing: border-box;\n"
+                    + "            margin-top: 20px;\n"
+                    + "            border-radius: 7px;\n"
+                    + "        }\n"
+                    + "    </style>");
             out.println("<h1 style=\"color: red;font-size: 80px;text-align: center;\">");
             out.println("<marquee behavior=\"alternate\">");
             String user = request.getParameter("user");
@@ -56,28 +67,30 @@ public class OperacionAritmetica extends HttpServlet {
             String Resta = request.getParameter("restar");
             String Multiplicación = request.getParameter("multiplicar");
             String División = request.getParameter("dividir");
-            String OperacionAritmetica = "";
 
             if (Suma != null) {
-                OperacionAritmetica = "suma";
                 out.println("<h1 style=\"color: white; font-size: 40px; text-align: center;\">");
-                out.println("Usuario: " + (user) + " el resultado de la " + (OperacionAritmetica) + " de (" + numero1 + ") y (" + numero2 + ") es: " + ((Integer.parseInt(numero1) + Integer.parseInt(numero2))));
+                out.println("Usuario: " + (user) + " el resultado de la suma de (" + numero1 + ") y (" + numero2 + ") es: " + ((Integer.parseInt(numero1) + Integer.parseInt(numero2))));
                 out.println("</h1");
             } else if (Resta != null) {
-                OperacionAritmetica = "resta";
                 out.println("<h1 style=\"color: white; font-size: 40px; text-align: center;\">");
-                out.println("Usuario: " + (user) + " el resultado de la " + (OperacionAritmetica) + " de (" + numero1 + ") y (" + numero2 + ") es: " + ((Double.parseDouble(numero1) - Double.parseDouble(numero2))));
+                out.println("Usuario: " + (user) + " el resultado de la resta de (" + numero1 + ") y (" + numero2 + ") es: " + ((Double.parseDouble(numero1) - Double.parseDouble(numero2))));
                 out.println("</h1");
             } else if (Multiplicación != null) {
-                OperacionAritmetica = "multiplicación";
                 out.println("<h1 style=\"color: white; font-size: 40px; text-align: center;\">");
-                out.println("Usuario: " + (user) + " el resultado de la " + (OperacionAritmetica) + " de (" + numero1 + ") y (" + numero2 + ") es: " + ((Double.parseDouble(numero1) * Double.parseDouble(numero2))));
+                out.println("Usuario: " + (user) + " el resultado de la multiplicación de (" + numero1 + ") y (" + numero2 + ") es: " + ((Double.parseDouble(numero1) * Double.parseDouble(numero2))));
                 out.println("</h1");
             } else if (División != null) {
-                OperacionAritmetica = "división";
-                out.println("<h1 style=\"color: white; font-size: 40px; text-align: center;\">");
-                out.println("Usuario: " + (user) + " el resultado de la " + (OperacionAritmetica) + " de (" + numero1 + ") y (" + numero2 + ") es: " + ((Double.parseDouble(numero1) / Double.parseDouble(numero2))));
-                out.println("</h1");
+                if (Double.parseDouble(numero2) != 0) {
+                    out.println("<h1 style=\"color: white; font-size: 40px; text-align: center;\">");
+                    out.println("Usuario: " + (user) + " el resultado de la división de (" + numero1 + ") y (" + numero2 + ") es: " + ((Double.parseDouble(numero1) / Double.parseDouble(numero2))));
+                    out.println("</h1");
+                }else {
+                    out.println("<h1 style=\"color: white; font-size: 40px; text-align: center;\">");
+                    out.println("No es posible dividir entre cero");
+                    out.println("</h1");
+                }
+
             }
             out.println("</p>");
             out.println("</fieldset>");
