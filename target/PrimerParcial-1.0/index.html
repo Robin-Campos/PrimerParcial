@@ -7,11 +7,10 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> 
     </head>
     <body>
-        
+
         <div class="content">
-            <h1>Formulario</h1>
-            <form name="formulario" action="/recursoEnServidor" method="post">
-                
+            <h1>Formulario Ues programacion 2</h1>
+            <form name="formulario" action="/PrimerParcial/Servlet" method="post">
                 <p>Nombre</p>
                 <input type="text" name="name" value="nombre">
                 <br><br>
@@ -21,11 +20,17 @@
                 <p>Numero 2</p>
                 <input type="number" name="numero2" value="0">
                 <br><br>
-                <p>Que operacion desea realizar?</p>
-                <input id="botonS" type="button" name="Suma" value="Suma">
-                <input id="botonR" type="button" name="Resta" value="Resta">
-                <input id="botonM" type="button" name="Multiplicacion" value="Multiplicacion">
-                <input id="botonD" type="button" name="Division" value="Division">
+                <p>Que operacion desea hacer?</p>
+                <select name="Operacion"  class="default">
+                    <option value="1">Suma</option>
+                    <option value="2">Resta</option>
+                    <option value="3">Multiplicacion</option>
+                    <option value="4">Division</option>
+                </select>
+                
+                
+                <br><br>
+                <input type="submit" value="Enviar" class="default" >
             </form>
         </div>
     </body>
