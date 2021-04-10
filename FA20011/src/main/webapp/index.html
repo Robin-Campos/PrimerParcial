@@ -1,10 +1,53 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Start Page</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
+
+<head>
+    <title>Ingreso de Datos</title>
+    <meta charset="UTF-8">
+</head>
+
+<body style="background-color:rgba(14, 13, 13, 0.952);">
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 80px;
+        }
+        p {
+            font-size: 30px;
+            color:white;
+        }
+    </style>
+    <h1 style="color: red;">
+        <marquee behavior="alternate">
+            BIENVENIDO
+        </marquee>
+    </h1>
+    <form name="registro" action="OperacionAritmetica" method="POST">
+        <fieldset>
+            <legend style="color:red; font-size: 70px;text-align: center; ">Datos:</legend>
+            <p>Por favor ingrese los siguientes datos:</p>
+            <p><label>Usuario <input type="text" name="user"></label></p>
+            <p><label>Número Uno <input type="number" name="numero1" id="numero1"></label></p>
+            <p><label>Número Dos <input type="number" name="numero2" id="numero2"></label></p>
+            <br>
+        </fieldset>
+        <fieldset>
+        <legend style="color:red; font-size: 70px;text-align: center; ">Operación Aritmética</legend>
+        <p style=\"color: white;font-size: 40px;\">
+        ¿Qué operación aritmética desea realizar?
+        </p>
+        <input style= "font-size: 30px; "type="submit" name="sumar" value="Suma">
+        <input style= "font-size: 30px;"type="submit" name="restar" value="Resta">
+        <input style= "font-size: 30px;"type="submit" name="multiplicar" value="Multiplicación">
+        <input style= "font-size: 30px;"type="submit" name="dividir" value="División">
+        </fieldset>
+        <p>
+            <input style="font-size: 30px;" type="reset" value="Borrar Datos">
+        </p>
+
+    </form>
+
+
+</body>
+
 </html>
