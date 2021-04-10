@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Start Page</title>
+        <title>Formulario</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="estilos.css">    
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> 
     </head>
     <body>
-        <h1>Hello World!</h1>
+        
+        <div class="content">
+            <h1>Formulario</h1>
+            <form name="formulario" action="/recursoEnServidor" method="post">
+                
+                <p>Nombre</p>
+                <input type="text" name="name" value="nombre">
+                <br><br>
+                <p>Numero 1</p>
+                <input type="number" name="numero1" value="0">
+                <br><br>
+                <p>Numero 2</p>
+                <input type="number" name="numero2" value="0">
+                <br><br>
+                <p>Que operacion desea realizar?</p>
+                <input id="botonS" type="button" name="Suma" value="Suma">
+                <input id="botonR" type="button" name="Resta" value="Resta">
+                <input id="botonM" type="button" name="Multiplicacion" value="Multiplicacion">
+                <input id="botonD" type="button" name="Division" value="Division">
+            </form>
+        </div>
     </body>
 </html>

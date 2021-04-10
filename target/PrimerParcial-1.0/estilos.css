@@ -1,0 +1,35 @@
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #17223b;
+}
+.content {
+    width: 30%;
+    height: auto;
+    margin: 200px auto 0 auto;
+    background-color: #263859;
+    padding: 10px;
+    border-style: solid;
+    border-color: #6b778d;
+    border-width: 3px;
+    
+}
+
+h1 , p{
+    color: rgba(255,103,104,1);
+    font-family: 'Roboto', sans-serif;
+    
+}
+p {
+    font-size: 20px;
+}
+
+#botonS,#botonR,#botonM,#botonD {
+   
+    
+}
