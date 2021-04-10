@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <style>
+  body {
+    background-color:deepskyblue
+  }
+</style>
+    <center>
+        <h1>¡Bienvenido!</h1>
+        <form action="proyecto1servlet" method="post">
+        Ingrese su nombre: <input type="text" name="nombre" required>
+        <table border="1">
+            <tr>
+                <td>
+                    Ingrese el primer número: <input type="text" name="numero1" required>
+                </td>
+                <td>
+                    Ingrese el segundo número: <input type="text" name="numero2" required>
+                </td>
+            </tr>
+        </table>
+        <h2>Seleccione el(los) método(s) que desea usar:</h2>
+        <table border="1">
+            <tr>
+                <td>
+                    Suma <input style="color:black;" type="checkbox" name="suma" value="suma" >
+                </td>
+                <td>
+                    Resta <input style="color:black;" type="checkbox" name="resta" value="resta" >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Multiplicación <input style="color:black;" type="checkbox" name="multi" value="multi" >
+                </td>
+                <td>
+                    División <input style="color:black;" type="checkbox" name="division" value="division" >
+                </td>
+            </tr>
+</table>
+        <input style="color:black;" type="submit" name="calcular" required>
+    </center>
+</form>
+</body>
+</html>
