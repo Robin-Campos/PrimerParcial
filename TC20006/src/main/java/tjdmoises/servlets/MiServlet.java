@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package tjdmoises.servlets;
-import tjdmoises.servlets.Primos;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
@@ -18,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author Moisés
  */
 public class MiServlet extends HttpServlet {
-Primos numPrimo = new Primos();
+    Primos numPrimo = new Primos();
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -54,9 +53,11 @@ Primos numPrimo = new Primos();
             resta = request.getParameter("resta");
             multi = request.getParameter("multi");
             division = request.getParameter("division");
-            int cont = 0, num = 0;
+            int cont = 0;
             double resul;
             Scanner sc = new Scanner(System.in);
+            
+            //Suma
             if (suma != null) {
                 resul = Double.parseDouble(numero1) + Double.parseDouble(numero2);
                 out.println("Usuario " + user + " | El resultado de la suma ( " + numero1 + " ) + ( " + numero2 + " ) es: " + "\n" + resul + "\n");
@@ -66,69 +67,33 @@ Primos numPrimo = new Primos();
                     if (this.numPrimo.esPrimo(x) == true) {
                         cont++;
                         out.println("<br>");
-                        out.println(String.valueOf(x) + ",");
+                        out.println(String.valueOf(x));
                     }
                 }
                 out.println("<br>");
                 out.println("\nTotal de numeros primos: " + cont);
                 sc.close();
             }
-            if (resta != null) {
-                // out.println("<h1>Bienvenido de nuevo "+nombre+" </h1>");
+            
+            //Resta
+            if (resta != null) {               
                 resul = Double.parseDouble(numero1) - Double.parseDouble(numero2);
                 out.println("Usuario " + user + " | El resultado de la resta (" + numero1 + ") - (" + numero2 + ") es : " + resul);
                 out.println("<br>");
-                out.println("Los numeros primos entre " + numero1 + " y " + numero2 + " son :");
-                for (int x = Integer.parseInt(numero2); x >= Integer.parseInt(numero1); x--) {
-                    //out.println("Holamundo2");
-                    if (this.numPrimo.esPrimo(x) == true) {
-                        cont++;
-                        out.println("<br>");
-                        out.println(String.valueOf(x) + ",");
-                    }
-                }
-
-                out.println("<br>");
-                out.println("\nTotal de numeros primos: " + cont);
-                sc.close();
             }
+            
+            //Multiplicación
             if (multi != null) {
-                // out.println("<h1>Bienvenido de nuevo "+nombre+" </h1>");
                 resul = Double.parseDouble(numero1) * Double.parseDouble(numero2);
                 out.println("Usuario " + user + " | El resultado de la multiplicación (" + numero1 + ") * (" + numero2 + ") es : " + resul);
                 out.println("<br>");
-                out.println("Los numeros primos entre " + numero1 + " y " + numero2 + " son :");
-                for (int x = Integer.parseInt(numero2); x >= Integer.parseInt(numero1); x--) {
-                    //out.println("Holamundo2");
-                    if (this.numPrimo.esPrimo(x) == true) {
-                        cont++;
-                        out.println("<br>");
-                        out.println(String.valueOf(x) + ",");
-                    }
-                }
-
-                out.println("<br>");
-                out.println("\nTotal de numeros primos: " + cont);
-                sc.close();
             }
+            
+            //División
             if (division != null) {
-                // out.println("<h1>Bienvenido de nuevo "+nombre+" </h1>");
                 resul = Double.parseDouble(numero1) / Double.parseDouble(numero2);
                 out.println("Usuario " + user + " | El resultado de la división (" + numero1 + ") / (" + numero2 + ") es : " + resul);
                 out.println("<br>");
-                out.println("Los numeros primos entre " + numero1 + " y " + numero2 + " son :");
-                for (int x = Integer.parseInt(numero2); x >= Integer.parseInt(numero1); x--) {
-                    //out.println("Holamundo2");
-                    if (this.numPrimo.esPrimo(x) == true) {
-                        cont++;
-                        out.println("<br>");
-                        out.println(String.valueOf(x) + ",");
-                    }
-                }
-
-                out.println("<br>");
-                out.println("\nTotal de numeros primos: " + cont);
-                sc.close();
             }
             out.println("</p>");
             out.println("<div class=\"button\">");

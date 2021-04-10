@@ -4,8 +4,6 @@ body{
     font-size: 1rem;
     line-height: 1.4em;
     margin: 0;
-
-    background-image: url(imagen01.jpg);
     background-position: top center;
     background-repeat:repeat;
     background-color: #262626;
@@ -89,55 +87,6 @@ legend{
     text-decoration: none;
     color: #000;
 }
-
-#enviar2{
-    background: none;
-    border: rgba(204, 204, 204, 0.18) 1px solid;
-    color: white;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 25px 25px 25px 25px;
-    font-size: 15px;
-    transition: all 0.4s linear;
-    cursor: default;
-    text-align: center;
-    width: 100%;
-    list-style: none;
-    padding: 10px 0;
-    margin: 10px
-}
-
-#enviar2:hover{
-    cursor: pointer;
-    background-color: #EB233C;
-    text-decoration: none;
-    color: #000;
-}
-
-#enviar3{
-    background: none;
-    border: rgba(204, 204, 204, 0.18) 1px solid;
-    color: white;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 25px 25px 25px 25px;
-    font-size: 15px;
-    transition: all 0.4s linear;
-    cursor: default;
-    text-align: center;
-    width: 100%;
-    list-style: none;
-    padding: 10px 0;
-    margin: 10px
-}
-
-#enviar3:hover{
-    cursor: pointer;
-    background-color: #EB233C;
-    text-decoration: none;
-    color: #000;
-}
-
 
 @media (max-width:480px) {
     form{
@@ -223,18 +172,6 @@ h3{
 .header a{
     color: white;
     text-decoration: none;
-}
-
-
-.logo-nav-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    letter-spacing: 10px;
-    font-size: 1.3em;
 }
 
 .navigation ul{
