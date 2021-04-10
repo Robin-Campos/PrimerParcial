@@ -66,17 +66,17 @@ public class OperacionAritmetica extends HttpServlet {
             } else if (Resta != null) {
                 OperacionAritmetica = "resta";
                 out.println("<h1 style=\"color: white; font-size: 40px; text-align: center;\">");
-                out.println("Usuario: " + (user) + " el resultado de la " + (OperacionAritmetica) + " de (" + numero1 + ") y (" + numero2 + ") es: " + ((Integer.parseInt(numero1) - Integer.parseInt(numero2))));
+                out.println("Usuario: " + (user) + " el resultado de la " + (OperacionAritmetica) + " de (" + numero1 + ") y (" + numero2 + ") es: " + ((Double.parseDouble(numero1) - Double.parseDouble(numero2))));
                 out.println("</h1");
             } else if (Multiplicación != null) {
                 OperacionAritmetica = "multiplicación";
                 out.println("<h1 style=\"color: white; font-size: 40px; text-align: center;\">");
-                out.println("Usuario: " + (user) + " el resultado de la " + (OperacionAritmetica) + " de (" + numero1 + ") y (" + numero2 + ") es: " + ((Integer.parseInt(numero1) * Integer.parseInt(numero2))));
+                out.println("Usuario: " + (user) + " el resultado de la " + (OperacionAritmetica) + " de (" + numero1 + ") y (" + numero2 + ") es: " + ((Double.parseDouble(numero1) * Double.parseDouble(numero2))));
                 out.println("</h1");
             } else if (División != null) {
                 OperacionAritmetica = "división";
                 out.println("<h1 style=\"color: white; font-size: 40px; text-align: center;\">");
-                out.println("Usuario: " + (user) + " el resultado de la " + (OperacionAritmetica) + " de (" + numero1 + ") y (" + numero2 + ") es: " + ((Integer.parseInt(numero1) / Integer.parseInt(numero2))));
+                out.println("Usuario: " + (user) + " el resultado de la " + (OperacionAritmetica) + " de (" + numero1 + ") y (" + numero2 + ") es: " + ((Double.parseDouble(numero1) / Double.parseDouble(numero2))));
                 out.println("</h1");
             }
             out.println("</p>");
@@ -130,6 +130,7 @@ public class OperacionAritmetica extends HttpServlet {
         }
 
     }
+
 
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
