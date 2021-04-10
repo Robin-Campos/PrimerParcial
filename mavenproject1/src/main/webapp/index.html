@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="index.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        
+        <form action="control.jsp" method="post">
+
+            <div class="container">
+                <h1>Parcial 1</h1>
+                <div class="container-input">
+                    <div class="container-input__text">
+                        <label for="fname">NOMBRE</label>
+                        <input type="text" id="fname" name="name">
+                    </div>
+                    <div class="container-input__text">
+                        <label for="fname">NUMERO l</label>
+                        <input type="text" id="fname" name="numero1">
+                    </div>
+                    <div class="container-input__text">
+                        <label for="fname">NUMERO ll</label>
+                        <input type="text" id="fname" name="numero2">
+                    </div>
+                </div>
+
+                <div class="container-input-radio">
+                    <div class="container-input__radio">
+                        <input type="radio" id="suma" name="operacion" value="suma">
+                        <label class="radio" for="suma">SUMA</label>
+                    </div>
+                    <div class="container-input__radio">
+                        <input type="radio" id="resta" name="operacion" value="resta">
+                        <label class="radio" for="resta">RESTA</label>
+                    </div>
+                    <div class="container-input__radio">
+                        <input type="radio" id="multiplicacion" name="operacion" value="multiplicacion">
+                        <label class="radio" for="multiplicacion">MULTIPLICACION</label>
+                    </div>
+                    <div class="container-input__radio">
+                        <input type="radio" id="division" name="operacion" value="division">
+                        <label class="radio" for="division">DIVISIÓN</label>
+                    </div>
+                </div>
+
+                <div class="container-submit">
+                    <button type="submit">ENVIAR</button>
+                </div>
+            </div>
+
+        </form>
+
+    </body>
+</html>

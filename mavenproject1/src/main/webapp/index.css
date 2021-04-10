@@ -1,0 +1,123 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    display: flex;
+
+}
+
+form{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    min-width: 40%;
+    background-color: #F2F5FA;
+    padding: 3em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.container-input{
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.container-input__text{
+    min-width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: .4em;
+}
+
+input[type=text]{
+    min-width: 70%;
+    border: 2.5px solid #5F93E6;
+    outline: none;
+    padding: .3em;
+    padding-left: .6em;
+    color: #818492;
+    background-color: #D9DFEB;
+
+}
+
+
+
+label{
+    min-width: 70%;
+    margin-bottom: .2em;
+    font-size: 0.774rem;
+    display: block;
+    color: #5F93E6;
+    font-weight: 500;
+}
+
+.radio{
+    margin-top: .15em;
+    margin-left: .2em;
+    font-weight: 500;
+    font-size: 0.774rem;
+}
+
+.radio:hover{
+    color: aqua;
+    margin-right: .2em;
+}
+
+.container-input-radio{
+    min-width: 42%;
+    padding: .2em;
+}
+
+.container-input__radio{
+    border: 2px solid #5F93E6;
+    margin-bottom: .3em;
+    display: flex;
+    justify-content: flex-start;
+
+    width: 70%;
+    padding: .2em .5em;
+    color: red;
+}
+
+.container-input__radio:hover > .radio {
+    color: white;
+}
+
+.container-input__radio:hover{
+    background-color: #5F93E6;
+
+}
+
+.container-submit{
+    margin-top: .8em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+button{
+    width: 45%;
+    padding: .8em 0;
+    background-color: #5F93E6;
+    border: none;
+    color: white;
+}
