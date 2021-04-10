@@ -4,7 +4,7 @@ body{
     font-size: 1rem;
     line-height: 1.4em;
     margin: 0;
-    
+
     background-image: url(imagen01.jpg);
     background-position: top center;
     background-repeat:repeat;
@@ -69,15 +69,15 @@ legend{
 #enviar1{
     background: none;
     border: rgba(204, 204, 204, 0.18) 1px solid;
-	color: white;
-	text-decoration: none;
-	display: inline-block;
-	border-radius: 25px 25px 25px 25px;
-	font-size: 15px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 25px 25px 25px 25px;
+    font-size: 15px;
     transition: all 0.4s linear;
     cursor: default;
-	text-align: center;
-	width: 100%;
+    text-align: center;
+    width: 100%;
     list-style: none;
     padding: 10px 0;
     margin: 10px
@@ -86,22 +86,22 @@ legend{
 #enviar1:hover{
     cursor: pointer;
     background-color: #EB233C;
-	text-decoration: none;
-	color: #000;
+    text-decoration: none;
+    color: #000;
 }
 
 #enviar2{
     background: none;
     border: rgba(204, 204, 204, 0.18) 1px solid;
-	color: white;
-	text-decoration: none;
-	display: inline-block;
-	border-radius: 25px 25px 25px 25px;
-	font-size: 15px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 25px 25px 25px 25px;
+    font-size: 15px;
     transition: all 0.4s linear;
     cursor: default;
-	text-align: center;
-	width: 100%;
+    text-align: center;
+    width: 100%;
     list-style: none;
     padding: 10px 0;
     margin: 10px
@@ -110,9 +110,34 @@ legend{
 #enviar2:hover{
     cursor: pointer;
     background-color: #EB233C;
-	text-decoration: none;
-	color: #000;
+    text-decoration: none;
+    color: #000;
 }
+
+#enviar3{
+    background: none;
+    border: rgba(204, 204, 204, 0.18) 1px solid;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 25px 25px 25px 25px;
+    font-size: 15px;
+    transition: all 0.4s linear;
+    cursor: default;
+    text-align: center;
+    width: 100%;
+    list-style: none;
+    padding: 10px 0;
+    margin: 10px
+}
+
+#enviar3:hover{
+    cursor: pointer;
+    background-color: #EB233C;
+    text-decoration: none;
+    color: #000;
+}
+
 
 @media (max-width:480px) {
     form{
@@ -120,6 +145,11 @@ legend{
     }
 }
 
+p{
+    margin-bottom: 1.6em;
+    color: #cccccc;
+    text-align: justify;
+}
 
 h1{
     text-align: center;
@@ -128,6 +158,11 @@ h1{
     color: #ffffff;
 }
 
+h5{
+    text-align: center;
+    line-height: 1.2em;
+    color: #ffffff;
+}
 
 h3{
     color: white;
@@ -145,40 +180,40 @@ h3{
 
 
 .button{
-	background-attachment: fixed;
-	background-position: top center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	color: white;
-	cursor: default;
-	text-align: center;
-	width: 100%;
-	float: left;
+    background-attachment: fixed;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    cursor: default;
+    text-align: center;
+    width: 100%;
+    float: left;
 }
 
-.button-button{
-	border: rgba(204, 204, 204, 0.18) 1px solid;
-	padding: 12px 35px;
-	color: #ccc;
-	text-decoration: none;
-	display: inline-block;
-	border-radius: 25px 25px 25px 25px;
-	font-size: 15px;
-	margin-top: 50px;
+.button-button-a{
+    border: rgba(204, 204, 204, 0.18) 1px solid;
+    padding: 12px 35px;
+    color: #ccc;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 25px 25px 25px 25px;
+    font-size: 15px;
+    margin-top: 50px;
     transition: all 0.4s linear;
 }
 
-.button-button:hover{
-	background-color: #EB233C;
-	text-decoration: none;
-	color: #000;
+.button-button-a:hover{
+    background-color: #EB233C;
+    text-decoration: none;
+    color: #000;
 }
 
 .header{
     background: #333;
     color: antiquewhite;
     padding: 2rem 0;
-    
+
     position: fixed;
     left: 0;
     top: 0;
@@ -232,11 +267,4 @@ h3{
     background: #404040;
     padding: 2rem 5rem;
     text-align: center;
-}
-
-.footer-logo{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 100;
 }
