@@ -74,4 +74,10 @@
             </plugin>
         </plugins>
     </build>
+    <description>Primer Parcial
+Programación II | GT-2
+
+Se utilizó el JDK 1.8.0_281 y GlassFish Server Open Source Edition 5.0
+
+Moisés Ernesto Tejada Cruz | TC20006</description>
 </project>
