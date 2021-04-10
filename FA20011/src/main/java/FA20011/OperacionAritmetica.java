@@ -74,10 +74,17 @@ public class OperacionAritmetica extends HttpServlet {
                 out.println("Usuario: " + (user) + " el resultado de la " + (OperacionAritmetica) + " de (" + numero1 + ") y (" + numero2 + ") es: " + ((Double.parseDouble(numero1) * Double.parseDouble(numero2))));
                 out.println("</h1");
             } else if (División != null) {
-                OperacionAritmetica = "división";
-                out.println("<h1 style=\"color: white; font-size: 40px; text-align: center;\">");
-                out.println("Usuario: " + (user) + " el resultado de la " + (OperacionAritmetica) + " de (" + numero1 + ") y (" + numero2 + ") es: " + ((Double.parseDouble(numero1) / Double.parseDouble(numero2))));
-                out.println("</h1");
+                if (Double.parseDouble(numero2) != 0) {
+                    OperacionAritmetica = "división";
+                    out.println("<h1 style=\"color: white; font-size: 40px; text-align: center;\">");
+                    out.println("Usuario: " + (user) + " el resultado de la " + (OperacionAritmetica) + " de (" + numero1 + ") y (" + numero2 + ") es: " + ((Double.parseDouble(numero1) / Double.parseDouble(numero2))));
+                    out.println("</h1");
+                } else {
+                    out.println("<h1 style=\"color: white; font-size: 40px; text-align: center;\">");
+                    out.println("No es posible dividir entre cero");
+                    out.println("</h1");
+                }
+
             }
             out.println("</p>");
             out.println("</fieldset>");
