@@ -25,8 +25,14 @@
 
             <fieldset>
                 <legend>Escribir dos numeros:</legend>
-                <p><label>Numero 1: <input type="number" name="num1"></label></p>
-                <p><label>Numero 2: <input type="number" name="num2"></label></p>
+                <fieldset>
+                    <legend>Numero 1:</legend>
+                    <input type="number" name="num1" placeholder="Digita un número" value="2" required id="number">
+                </fieldset>
+                <fieldset>
+                    <legend>Numero 2:</legend>
+                    <input type="number" name="num2" placeholder="Digita un número" value="4" required id="number">
+                </fieldset>
             </fieldset>
 
             <fieldset>
